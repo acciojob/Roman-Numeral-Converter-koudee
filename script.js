@@ -9,7 +9,19 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  //your code here
+  for(let i=0;i<=obj.length;i++)
+	  {
+		  let curVal=obj[i][1];
+		  if(curVal===n)
+		  {
+			  return obj[i];
+		  }
+		  if(curVal>n)
+		  {
+			  return obj[i-1];
+		  }
+	  }
+	return obj[obj.length-1];
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
